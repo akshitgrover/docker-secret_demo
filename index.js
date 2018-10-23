@@ -1,9 +1,9 @@
 const http = require("http");
 const fs = require("fs");
 
-const secret_1_data = fs.readFileSync("/run/secrets/SECRET_1");
+const secret_1_data = fs.readFileSync("/run/secrets/SECRET_1", {encoding:"utf8"});
 
-const secret_2_data = fs.readFileSync("/run/secrets/SECRET_2");
+const secret_2_data = fs.readFileSync("/run/secrets/SECRET_2", {encoding: "utf8"});
 
 const server = http.createServer();
 
