@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+ application:
+  image: akshitgrover/secrets_demo
+  ports:
+   - "3000:3000"
+  secrets:
+   - SECRET_1
+   - SECRET_2
+
+secrets:
+ SECRET_1:
+  external: true
+ SECRET_2:
+  file: ./secret_file.txt
